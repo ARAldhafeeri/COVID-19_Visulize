@@ -1,0 +1,4 @@
+zookeeper-server-start ../../config/zookeeper.properties
+kafka-server-start.bat ../../config/server.properties
+kafka-topics.bat --zookeeper 0.0.0.0:2181 --topic testFrontend --create -partitions 1 --replication-factor 1
+

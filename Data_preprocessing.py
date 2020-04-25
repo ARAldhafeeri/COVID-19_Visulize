@@ -383,7 +383,8 @@ Preprocessed_Coordinates  = ( children_0 + children_1 + children_2 + children_3
                             + children_31 + children_32)
 
 
-      
+# Creating Hashmap of the data
+
 
 "Here we are applying traveling salesperson problem algorithm & vislizing it"
 import numpy as np
@@ -408,26 +409,36 @@ optimized_path = solve_tsp(distances_matrix)
 optimized_path_points = [data_array[x] for x in optimized_path]
 
 
-plt.figure(figsize=(10, 10), dpi=300)  
-plt.plot([x[1] for x in optimized_path_points],  
-         [x[0] for x in optimized_path_points],  
-         color='black', lw=1)  
-plt.xlim(0, 100)  
-plt.ylim(0, 200)  
-plt.gca().invert_yaxis()  
-plt.xticks([])  
-plt.yticks([])
-plt.show()
+dict1 = dict()
+dict1["Coordinates"] = Preprocessed_Coordinates
+dict1["optimized_path"] = optimized_path.tolist()
+dict1["optimized_path_points"] = optimized_path_points
 
-from tspy import TSP
+import json
 
-tsp = TSP()
-tsp.read_mat(distances_matrix)
-tsp.read_data(data_array)
-
-from tspy.solvers import TwoOpt_solver
-two_opt = TwoOpt_solver(initial_tour='NN', iter_num=131)
-two_opt_tour = tsp.get_approx_solution(two_opt)
-tsp.plot_solution('TwoOpt_solver')
-          
+with open('data.txt','w') as json_file:
+    json.dump(dict1, json_file)
+#
+# plt.figure(figsize=(10, 10), dpi=300)
+# plt.plot([x[1] for x in optimized_path_points],
+#          [x[0] for x in optimized_path_points],
+#          color='black', lw=1)
+# plt.xlim(0, 100)
+# plt.ylim(0, 200)
+# plt.gca().invert_yaxis()
+# plt.xticks([])
+# plt.yticks([])
+# plt.show()
+#
+# from tspy import TSP
+#
+# tsp = TSP()
+# tsp.read_mat(distances_matrix)
+# tsp.read_data(data_array)
+#
+# from tspy.solvers import TwoOpt_solver
+# two_opt = TwoOpt_solver(initial_tour='NN', iter_num=131)
+# two_opt_tour = tsp.get_approx_solution(two_opt)
+# tsp.plot_solution('TwoOpt_solver')
+#
           
