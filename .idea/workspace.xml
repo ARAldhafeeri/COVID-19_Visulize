@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61513378-09e1-4652-b7c2-1f0efad33606" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogLatToFeets.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TryKafka.py" beforeDir="false" afterPath="$PROJECT_DIR$/busdata1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/data/kafka/meta.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/data/kafka/meta.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/data/kafka/recovery-point-offset-checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/data/kafka/recovery-point-offset-checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/data/kafka/replication-offset-checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/data/kafka/replication-offset-checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/data/kafka/testFrontend-0/00000000000000000000.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/data/kafka/testFrontend-0/00000000000000000000.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/data/kafka/testFrontend-0/00000000000000000000.timeindex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/data/kafka/testFrontend-0/leader-epoch-checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/data/zookeeper/version-2/log.1" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/data/zookeeper/version-2/log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/logs/controller.log" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/logs/controller.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/logs/controller.log.2020-04-26-01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/logs/log-cleaner.log" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/logs/log-cleaner.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/logs/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/logs/server.log.2020-04-26-01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/logs/state-change.log" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/logs/state-change.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/logs/state-change.log.2020-04-26-00" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/logs/state-change.log.2020-04-26-01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka_commands_runserver.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kafka_commands_runserver.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/s2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1b5mPcvJzJEvGqUfE8iWuGpH3Eq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61513378-09e1-4652-b7c2-1f0efad33606" name="Default Changelist" comment="" />
+      <created>1587930306195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587930306195</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

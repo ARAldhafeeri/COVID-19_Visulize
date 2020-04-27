@@ -1,4 +1,13 @@
+1) Must start zookeper new command window: D:\Projects\COVID-19_Visulize\kafka\bin\windows>
 zookeeper-server-start ../../config/zookeeper.properties
+2) Must start kafka server new command window: D:\Projects\COVID-19_Visulize\kafka\bin\windows>
 kafka-server-start.bat ../../config/server.properties
-kafka-topics.bat --zookeeper 0.0.0.0:2181 --topic testFrontend --create -partitions 1 --replication-factor 1
+3) must create new topic D:\Projects\COVID-19_Visulize\kafka\bin\windows>
+kafka-topics.bat --zookeeper 0.0.0.0:2181 --topic COVID-19_test --create -partitions 1 --replication-factor 1
+
+4: starting the consumer: 
+kafka-console-consumer --bootstrap-server localhost:9092 --topic --topic COVID-19_test --from-beginning
+
+5) starting the producer
+kafka-console-producer.bat --broker-list localhost:9092 --topic COVID-19_test
 

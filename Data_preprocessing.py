@@ -19,12 +19,13 @@ data.drop(data.columns[91], axis=1, inplace=True)
 lat = data.iloc[:, 2].values
 log = data.iloc[:,3].values
 
-"""
-Important note: (.000008, 000008) (West, North) six feets away
- Means all new infections were 6 feets away from the origin father.
-For all the new infections generate imaginary points six feets away
+All_dates = data.columns
+All_dates.drop(['Country/Region'])
+All_dates.drop(index=['Lat'])
+All_dates = All_dates.tolist()
+All_dates = All_dates[3:]
+All_dates = All_dates[1:]
 
-"""
 
 # Converting lat, log into lists
 list_lat = lat.tolist()
@@ -176,30 +177,20 @@ Generate New imagniary coordinate based on:
   somewhere around the patient 0 in coordinate 0. 
   6 feets are (0.000008, 0.000008) away in form of (west, north) or ( log, lat)
   
+  in This model we are using (0.000040, 0.000040)
   
   Also we take into the account the confirmed casses generate a number of points
   based on  the confirmed casses of every day for that city.
 
  """
 
-"""
-Predict the new possible location of infected people
-Randomly place apoint 6 feets away from the original coordnate 0
-And keep doing this for every day there is confirmed cases
-BASED on WHO the person who got infected was 3 feets away
-And the virus can't travel airpone SO, the new confirmed casses
-Must passed at the point in ridus of 60 feet inintial from the 
-contagis person or area and every day using common sense
-This area should increase unless goverment 
-sanitize the whole area WITH social distaning and gloves and maskes
-"""
 
 
 
 
 def generate_child(confirmed_cases,original_coordinate,
-                                  N=1,
-                                  new_patient = (0.000008,0.000008),
+                                  N=3,
+                                  new_patient = (0.001208,0.001208),
                                   coordinate_0_childrens = []):
     """
     confirmed_cases: Number of confirmed cases through time from day 0
@@ -217,6 +208,7 @@ def generate_child(confirmed_cases,original_coordinate,
       
     N: optional arugment to set number of predicted locations
     integer
+    
     """
 
     coordinate_0_childrens = []
@@ -224,7 +216,7 @@ def generate_child(confirmed_cases,original_coordinate,
     for confirmed_case in Original_coor_0_confirmed:
       if(  confirmed_case > 0):
         for i in range(0, N):
-          increment =(0.000008,0.000008)
+          increment =(0.000940,0.00140)
           new_coordinates = tuple(map(sum,zip(original_coordinate,new_patient)))
           coordinate_0_childrens.append(new_coordinates)
           new_patient = tuple(map(sum,zip(increment,new_patient)))
@@ -382,6 +374,42 @@ Preprocessed_Coordinates  = ( children_0 + children_1 + children_2 + children_3
                             + children_28 + children_29 + children_30
                             + children_31 + children_32)
 
+All_confirmed_cases = (Original_coor_0_confirmed
+                     +Original_coor_1_confirmed
+                     +Original_coor_2_confirmed
+                     +Original_coor_3_confirmed
+                     +Original_coor_4_confirmed
+                     +Original_coor_5_confirmed
+                     +Original_coor_6_confirmed
+                     +Original_coor_7_confirmed
+                     +Original_coor_8_confirmed
+                     +Original_coor_9_confirmed
+                     +Original_coor_10_confirmed
+                     +Original_coor_11_confirmed
+                     +Original_coor_12_confirmed
+                     +Original_coor_13_confirmed
+                     +Original_coor_14_confirmed
+                     +Original_coor_15_confirmed
+                     +Original_coor_16_confirmed
+                     +Original_coor_17_confirmed
+                     +Original_coor_18_confirmed
+                     +Original_coor_19_confirmed
+                     +Original_coor_20_confirmed
+                     +Original_coor_21_confirmed
+                     +Original_coor_22_confirmed
+                     +Original_coor_23_confirmed
+                     +Original_coor_24_confirmed
+                     +Original_coor_25_confirmed
+                     +Original_coor_26_confirmed
+                     +Original_coor_27_confirmed
+                     +Original_coor_28_confirmed
+                     +Original_coor_29_confirmed
+                     +Original_coor_30_confirmed    
+                     +Original_coor_31_confirmed
+                     +Original_coor_32_confirmed
+    
+    )
+
 
 # Creating Hashmap of the data
 
@@ -395,9 +423,9 @@ data_array = np.array(Preprocessed_Coordinates)
 # Change Size of(data_array)
 selected_from_data_array = data_array[np.random.choice(data_array.shape[0],  
                                             replace=False,  
-                                            size=2710)]
+                                            size=8613)]
 # Get distances from coordinates x,y
-distances = pdist(data_array)
+distances = pdist(selected_from_data_array)
 # Create distance matrix
 distances_matrix = squareform(distances)
 
@@ -406,18 +434,27 @@ from tsp_solver.greedy_numpy import solve_tsp
 # Get the optimized path from slove_tsp
 optimized_path = solve_tsp(distances_matrix) 
 # get optimized_path_points
-optimized_path_points = [data_array[x] for x in optimized_path]
+optimized_path_points = [selected_from_data_array[x] for x in optimized_path]
 
+list_optimized_path_points = []
 
+for item in optimized_path_points:
+  convert =item.tolist()
+  list_optimized_path_points.append(convert)
 dict1 = dict()
+
 dict1["Coordinates"] = Preprocessed_Coordinates
-dict1["optimized_path"] = optimized_path.tolist()
-dict1["optimized_path_points"] = optimized_path_points
+dict1["optimized_path"] = optimized_path
+dict1["optimized_path_points"] = list_optimized_path_points
+dict1["Confirmed"] = All_confirmed_cases
+dict1["Dates"] = All_dates
+
+a = str(dict1)
 
 import json
 
-with open('data.txt','w') as json_file:
-    json.dump(dict1, json_file)
+with open('data.json','w') as json_file:
+    json.dump(a, json_file)
 #
 # plt.figure(figsize=(10, 10), dpi=300)
 # plt.plot([x[1] for x in optimized_path_points],
