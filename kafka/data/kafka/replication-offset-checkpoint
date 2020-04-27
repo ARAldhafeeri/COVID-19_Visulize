@@ -1,5 +1,5 @@
 0
-58
+59
 __consumer_offsets 22 0
 --topic 0 0
 __consumer_offsets 30 3
@@ -22,7 +22,7 @@ __consumer_offsets 49 0
 COVID-19-23 0 11421
 __consumer_offsets 47 0
 __consumer_offsets 16 0
-__consumer_offsets 28 1
+__consumer_offsets 28 3
 __consumer_offsets 31 3
 __consumer_offsets 36 0
 __consumer_offsets 42 0
@@ -39,7 +39,7 @@ __consumer_offsets 48 0
 __consumer_offsets 19 0
 __consumer_offsets 11 0
 __consumer_offsets 13 3
-__consumer_offsets 2 0
+__consumer_offsets 2 1
 __consumer_offsets 43 0
 __consumer_offsets 6 0
 __consumer_offsets 14 0
@@ -47,6 +47,7 @@ __consumer_offsets 20 0
 __consumer_offsets 0 0
 __consumer_offsets 44 0
 __consumer_offsets 39 3
+Covid-19_test 0 1504
 __consumer_offsets 12 3
 __consumer_offsets 45 6
 __consumer_offsets 1 0

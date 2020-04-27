@@ -19,6 +19,7 @@
     </head>
     <body>
     <h1> Test Frontend with flask</h1>
+
      <div id="mapid" style="width:900px; height:900px"></div>
          <script>
                 var mymap = L.map('mapid').setView([31.825708000000002, 117.22640799999999], 8);
@@ -45,7 +46,8 @@
                 mapMarkers1  = [];
                 circle1 = [];
 
-                var source = new EventSource('/topic/COVID-19-25');
+
+                var source = new EventSource('/topic/Covid-19_test');
                 source.addEventListener('message', function(e) {
                 obj = JSON.parse(e.data);
                 console.log(obj);

@@ -14,7 +14,7 @@ print(coordinates)
 
 #kafka producer
 client = KafkaClient(hosts="localhost:9092")
-topic = client.topics['COVID-19-25']
+topic = client.topics['Covid-19_test']
 producer = topic.get_sync_producer()
 
 
@@ -39,7 +39,7 @@ def generate_checkpoint(coordinates,optimized_path_points,Confirmed, Dates):
         message = json.dumps(data)
         print(message)
         producer.produce(message.encode('ascii'))
-        time.sleep(.08)
+        time.sleep(.15)
         if i == len(coordinates)-1:
             i = 0
         else:
